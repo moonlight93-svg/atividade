@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>ATIVIDADE</title>
+</head>
+<body>
+    <div class="arrowContainer" onclick="changeDisplay('telaInicio')"><img src="arrowBack.png" alt="" ></div>
+    
+    <div class="container-add">
+        <div class="add actionButton" onclick="changeDisplay('formularioCadastro')" id="addClientButton"><p>Add Client</p></div>
+    </div>
+    <div class="container">
+        <div class="caption">
+            <p>ID</p>
+            <p>NOME</p>
+            <p>TELEFONE</p>
+            <p>AÇÃO</p>
+        </div>
+        <div class="client">
+            <p>0</p>
+            <p>Luísa</p>
+            <p>40028922</p>
+            <div class="container-actionButton">
+                <div class="actionButton yellow" onclick="changeDisplay('formularioEdit', -1)"><p>Editar</p></div>
+                <div class="actionButton red"><p>Del</p></div>
+            </div>
+        </div>
+    </div>
+    <form action="" class="formCadastro">
+        <h1>Preencha</h1>
+        <label>Nome:<input type="text" name="" id="nomeCadastro"></label>
+        <label for="">Telefone:<input type="tel" name="" id="telefoneCadastro"></label>
+        <div class="submitButton" onclick="addClient()"><p>Cadastrar</p></div>
+    </form>
+    <form action="" class="formEdit">
+        <h1>quer mudar algo?</h1>
+        <label for="">Nome:<input type="radio" name="campo" value="nome"></label>
+        <label for="">Telefone:<input type="radio" name="campo" value="telefone"></label>
+        <label>Insira o novo valor:<input type="text" id="novoValor"></label>
+        <div class="submitButton" onclick="editClient()"><p>Cadastrar</p></div>
+    </form>
+    <script src="main.js"></script>
+</body>
+</html>
